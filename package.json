@@ -12,6 +12,9 @@
     "cheerio": "^1.0.0-rc.3",
     "request": "^2.88.2"
   },
+  "devDependencies": {
+    "eslint": "^8.0.0"  // Add ESLint here
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/PKUPI/heavens-above.git"
