@@ -65,4 +65,4 @@ jobs:
     - name: Deploy to Heroku
       run: |
         git remote add heroku https://git.heroku.com/your-app-name.git
-        git push heroku main  # Or specify the branch you want to deploy
+        git push heroku main
