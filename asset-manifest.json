@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/PKUPI/heavens-above/static/css/main.35e8ad33.css",
+    "main.js": "/PKUPI/heavens-above/static/js/main.554b7584.js",
+    "index.html": "/PKUPI/heavens-above/index.html",
+    "main.35e8ad33.css.map": "/PKUPI/heavens-above/static/css/main.35e8ad33.css.map",
+    "main.554b7584.js.map": "/PKUPI/heavens-above/static/js/main.554b7584.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.35e8ad33.css",
+    "static/js/main.554b7584.js"
+  ]
+}
