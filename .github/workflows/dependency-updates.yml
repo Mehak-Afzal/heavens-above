@@ -1,0 +1,10 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"  # The package manager you are using (e.g., npm, yarn)
+    directory: "/"            # The directory containing the package files
+    schedule:
+      interval: "daily"       # Frequency of updates (daily, weekly, monthly)
+    commit-message:
+      prefix: "deps"          # A prefix for the commit messages of the pull requests
+    open-pull-requests-limit: 5  # Maximum number of open pull requests at a time
+    target-branch: "main"     # The branch to target for pull requests
