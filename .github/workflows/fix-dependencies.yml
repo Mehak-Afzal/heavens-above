@@ -22,6 +22,8 @@ jobs:
         run: |
           rm -rf node_modules
           npm install
+      - name: Install gh-pages
+        run: npm install gh-pages
 
       - name: Build project
         run: npm run build
