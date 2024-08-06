@@ -20,9 +20,18 @@ jobs:
 
     - name: Install dependencies
       run: npm install
-
+      
+    - name: Install gh-pages
+      run: npm install gh-pages
+      
     - name: Build project
       run: npm run build
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./build 
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
