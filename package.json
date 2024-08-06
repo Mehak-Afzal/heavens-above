@@ -19,7 +19,8 @@
     "eslint": "^8.57.0",
     "react-scripts": "5.0.1",
     "@nextui-org/react": "^2.0.0", 
-    "@nextui-org/button": "^2.0.0"
+    "@nextui-org/button": "^2.0.0",
+    "gh-pages": "^3.2.3"
   },
   "repository": {
     "type": "git",
