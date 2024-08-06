@@ -15,6 +15,9 @@ jobs:
         with:
           node-version: '14'
 
+      - name: Install dependencies
+        run: npm install
+        
       - name: Clear npm cache
         run: npm cache clean --force
 
@@ -22,5 +25,3 @@ jobs:
         run: |
           rm -rf node_modules
           npm install
-      - name: Install dependencies
-        run: npm install
