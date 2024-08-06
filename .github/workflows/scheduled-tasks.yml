@@ -1,0 +1,41 @@
+name: Scheduled Tasks
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # This cron expression schedules the workflow to run daily at midnight (UTC)
+
+jobs:
+  maintenance:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14'  # Specify the Node.js version if needed
+
+      - name: Install dependencies
+        run: npm install  # Run this if you need to install dependencies
+
+      - name: Run maintenance script
+        run: node your-maintenance-script.js  # Replace with your actual script
+        # If using a shell script, use `bash your-script.sh` instead
+
+      - name: Notify completion
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const { context } = require('@actions/github');
+            const { Octokit } = require('@octokit/rest');
+            const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
+
+            await octokit.issues.createComment({
+              ...context.repo,
+              issue_number: 1,  // Replace with appropriate issue or PR number
+              body: 'Scheduled task completed successfully.'
+            });
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
